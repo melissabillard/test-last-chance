@@ -38,11 +38,12 @@
 
       const username = document.getElementById('username').value.trim();
       const payload = { username };
+      const urlApi = "http://api.cofrap.local/function/generate-password";
 
       console.log("Payload envoyé à l'API :", payload);
 
       try {
-        const res = await fetch("http://192.168.64.4:30657/function/generate-password", {
+        const res = await fetch(urlApi, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
